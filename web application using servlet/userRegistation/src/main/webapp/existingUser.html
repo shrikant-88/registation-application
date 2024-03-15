@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      /* Global styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-image: linear-gradient(
+          90deg,
+          rgba(174, 0, 255, 0.286),
+          rgba(255, 0, 0, 0.251),
+          rgba(21, 255, 0, 0.107),
+          rgba(255, 238, 0, 0.409)
+        );
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Form styles */
+      .form {
+        display: flex;
+        flex-direction: column;
+        width : 75%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: white;
+      }
+      body :hover {
+        box-shadow: 0px 0px 10px 3px rgb(48, 2, 255);
+      }
+      .form :hover {
+        box-shadow: 0px 0px 10px 3px rgb(255, 255, 255);
+      }
+
+      .form div {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .key {
+        width: 100px;
+        font-weight: bold;
+      }
+
+      .value {
+        flex: 1;
+      }
+
+      .value input {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      .value input[type="date"] {
+        width: 150px; /* Adjust width for date input */
+      }
+      .btn {
+        width: 22%;
+      }
+
+      .btn:hover {
+        box-shadow: 0px 0px 5px 2px rgb(60, 251, 2);
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: greenyellow;
+        font-weight: 500;
+        color: #000000;
+      }
+      #n_pass {
+        display: flex;
+        flex-direction: column;
+      }
+      #n_pass span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <hr />
+    <h1>USER LOGIN</h1>
+    <hr />
+    <div class="form">
+	  <form method="get" action="./reg">
+	  <div class="email">
+        <div class="key">E-Mail</div>
+        <div class="value"><input type="email" name="email" class="inp" required/></div>
+      </div>
+      <div class="password">
+        <div class="key">Password</div>
+        <div class="value">
+          <input id="pass1" type="password" name="password" class="inp" required/>
+        </div>
+      </div>
+      <div class="btn">
+        <button type="submit" onclick="execute()">Log in</button>
+      </div>
+      <h5>new user ? <a href="/userRegistation">register</a></h5>
+      </form>
+    </div>
+    
+    <script></script>
+  </body>
+</html>
